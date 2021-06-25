@@ -160,3 +160,18 @@ function calculateAreaCircle() {
 function handlerChangeOption(e) {
   selectChange = e;
 }
+
+// EXERCISE TEST 2
+
+function calcHeightTriangleIsc(
+  sidea,
+  sideb,
+  sidec,
+) {
+  const result = (sidea + sideb + sidec) / 3;
+  if (result !== sidea) throw new Error("Los lados deben ser iguales");
+  const divisibleTriangule = sidea ** 2;
+  const exponencialA = (sidea / 2) ** 2;
+
+  return Math.sqrt(divisibleTriangule - exponencialA);
+}
