@@ -4,11 +4,77 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geometric Figures 📐</title>
+  <title>Exercise 📐</title>
+  <link rel="stylesheet" href="../css/figures.css">
 </head>
 <body>
-  <h1>Geometric Figures</h1>
-  <my-app></my-app>
-  <script src="../js/figures.js" type="module"></script>
+  <header>
+    <h1>Geometric Figures</h1>
+    <a href="/html/figures.html">Figures</a>
+  </header>
+  <label for="metrics" class="Metrics">
+    Write what measure is your select option:
+    <select id="metrics" onchange="handlerChangeOption">
+      <option value="cm">Cm</option>
+      <option value="mm">Mm</option>
+    </select>
+  </label>
+  <main>
+    <section class="Dynamic_Figures">
+      <div class="Figure" id="Square"></div>
+    </section>
+    <section class="Card_Options" id="Square_card">
+      <h2>Calculate the area and perimeter of the next square:</h2>
+      <form onsubmit="(e) => e.preventDefault()">
+        <label for="sideSquare">
+          Write how long is the side of your square:
+          <input id="sideSquare" type="number" min="0" max="50" />
+        </label>
+        <button type="button" onclick="calculatePerimeterSquare()">Calculate perimeter</button>
+        <button type="button" onclick="calculateAreaSquare()">Calculate area</button>
+      </form>
+    </section>
+  </main>
+  <main>
+    <section class="Dynamic_Figures">
+      <div class="Figure Triangule" id="Triangule"></div>
+    </section>
+    <section class="Card_Options" id="Triangule_card">
+      <h2>Calculate the area and perimeter of the next triangule:</h2>
+      <form onsubmit="(e) => e.preventDefault()">
+        <label for="sideTriangule">
+          Write how long is the side 1 of your triangule:
+          <input id="sideTriangule" type="number" min="0" max="50" />
+        </label>
+        <label for="sideTriangule2">
+          Write how long is the height of your triangule:
+          <input id="sideTriangule2" type="number" min="0" max="50" />
+        </label>
+        <label for="baseTriangule">
+          Write how long is the base of your triangule:
+          <input id="baseTriangule" type="number" min="0" max="50" />
+        </label>
+        <button type="button" onclick="calculatePerimeterTriangule()">Calculate perimeter</button>
+        <button type="button" onclick="calculateAreaTriangule()">Calculate area</button>
+      </form>
+    </section>
+  </main>
+  <main>
+    <section class="Dynamic_Figures">
+      <div class="Figure Circle" id="Circle"></div>
+    </section>
+    <section class="Card_Options" id="Circle_card">
+      <h2>Calculate the area and perimeter of the next Circle:</h2>
+      <form onsubmit="(e) => e.preventDefault()">
+        <label for="sideCircle">
+          Write how long is the radius of your Circle:
+          <input id="sideCircle" type="number" min="0" max="50" />
+        </label>
+        <button type="button" onclick="calculatePerimeterCircle()">Calculate perimeter</button>
+        <button type="button" onclick="calculateAreaCircle()">Calculate area</button>
+      </form>
+    </section>
+  </main>
+  <script src="../js/figures.js"></script>
 </body>
 </html>

@@ -1,0 +1,133 @@
+:root {
+  --color-primary: #faccc9;
+  --color-secondary: #8bebce;
+  --color-light: #2dc497;
+  --color-black: #1f2020;
+  --color-link: #fa4335;
+  --color-white: rgba(255, 255, 255, 0.678);
+  --border-size-triangule: 60px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+h1, h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  background: linear-gradient(var(--color-primary), var(--color-secondary));
+  background-attachment: fixed;
+  height: 100%;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  padding-bottom: 1rem;
+}
+
+header a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.Card_Options {
+  background-color: var(--color-white);
+  border-radius: 2.5px;
+  max-width: 550px;
+  padding: 1rem;
+  height: fit-content;
+}
+
+input, select {
+  background-color: var(--color-white);
+  border: 0.5px solid rgb(192, 192, 192);
+  padding: 0.5rem;
+  border-radius: 2.5px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  box-shadow: 0px 1px 10px var(--color-secondary);
+}
+
+.Card_Options h2 {
+  margin-bottom: 1rem;
+}
+
+.Card_Options label {
+  display: block;
+  margin: 1rem 0;
+}
+
+button {
+  padding: 0.5rem;
+  background: var(--color-secondary);
+  border: none;
+  border-bottom: 2px solid var(--color-light);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.2s background, border;
+}
+
+button:hover {
+  background: var(--color-white);
+  border: 1px solid var(--color-light);
+}
+
+.Figure {
+  width: 150px;
+  height: 150px;
+  border-radius: 3px;
+  background-color: var(--color-link);
+  transition: 1s all;
+  padding: 0.5rem;
+  color: white;
+}
+
+.Figure.Triangule {
+  width: 200px;
+  height: 200px;
+  background: var(--color-light);
+
+  /* The points are: centered top, left bottom, right bottom */
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  position: relative;
+}
+
+.Figure.Triangule p {
+  position: absolute;
+  /* top: 0; */
+  bottom: 50%;
+  left: 45%;
+  transform: translate(-50%);
+  z-index: 15;
+}
+
+.Figure.Circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: var(--color-black);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  margin-top: 3rem;
+}
+
+.Metrics {
+  padding: 1rem;
+}
