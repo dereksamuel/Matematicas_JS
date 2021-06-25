@@ -8,7 +8,6 @@ const metrics = {
 
 const squareSides = [5, 5, 5, 5];
 const squarePerimeter = (side = 0) => {
-  console.log(selectChange);
   return (side || squareSides[0]) * squareSides.length * metrics[selectChange.value]();
 }
 const squareArea = (side) => {
@@ -109,7 +108,9 @@ function calculateAreaTriangule() {
   const pharragraphs = document.getElementById("resultAreaT");
   const pharragraph = document.createElement("p");
 
-  if (pharragraphs) $card.removeChild(pharragraphs);
+  if (pharragraphs && pharragraphs.textContent) {
+    $card.removeChild(pharragraphs);
+  }
 
   pharragraph.id = "resultAreaT";
   pharragraph.textContent = "Area: " + area + selectChange.value;
@@ -126,9 +127,8 @@ function calculatePerimeterCircle() {
   const pharragraphsArea = document.getElementById("resultAreaT");
   const pharragraph = document.createElement("p");
 
-  if (pharragraphs) {
+  if (pharragraphs && pharragraphs.textContent) {
     $card.removeChild(pharragraphs);
-    pharragraphsArea ? $card.removeChild(pharragraphsArea) : null;
   }
 
   pharragraph.id = "resultCircle";
@@ -145,12 +145,14 @@ function calculateAreaCircle() {
   // const $figure = document.querySelector("#Circle");
   const $card = document.querySelector("#Circle_card");
   const area = circleArea($sideCircle);
-  const pharragraphs = document.getElementById("resultAreaT");
+  const pharragraphs = document.getElementById("resultAreaC");
   const pharragraph = document.createElement("p");
 
-  if (pharragraphs) $card.removeChild(pharragraphs);
+  if (pharragraphs && pharragraphs.textContent) {
+    $card.removeChild(pharragraphs);
+  }
 
-  pharragraph.id = "resultAreaT";
+  pharragraph.id = "resultAreaC";
   pharragraph.textContent = "Area: " + area + selectChange.value;
   $card.appendChild(pharragraph);
 }
