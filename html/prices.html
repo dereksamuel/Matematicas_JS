@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percents</title>
+  <link rel="stylesheet" href="../css/prices.css">
+</head>
+<body>
+  <h1 style="margin: 1rem;">Percents</h1>
+  <div style="display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap;">
+    <div id="app"></div>
+    <form class="Form">
+      <label for="price">
+        Write the price of your product
+        <input type="number" id="price" />
+      </label>
+      <label for="discount">
+        Write the discount of your product
+        <input type="number" id="discount" />
+      </label>
+      <button type="button" onclick="handlerPriceDiscount()">Calculate</button>
+    </form>
+  </div>
+  <script src="../js/prices.js"></script>
+</body>
+</html>
