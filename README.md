@@ -13,3 +13,10 @@
 - Segundo paso: implementar fórmulas.
 - Tercer paso: make functions.
 - Cuarto paso: Rendering.
+
+## Work #2: Promedio, moda y mediana
+
+- Primer paso: definir las fórmulas.
+- Segundo paso: implementar fórmulas.
+- Tercer paso: make functions.
+- Cuarto paso: Rendering.
